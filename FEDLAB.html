@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Online Shop</title>
+
+<style>
+body { text-align:center; background:lightblue; }
+.product { background:white; margin:15px; padding:15px; }
+button { padding:8px; }
+</style>
+</head>
+
+<body>
+<h1>Online Shop</h1>
+
+<div class="product">
+    <h3>Phone</h3>
+    <p>Price: $10000</p>
+    <button onclick="add(10000)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Headphones</h3>
+    <p>Price: $1000</p>
+    <button onclick="add(1000)">Add to Cart</button>
+</div>
+
+<h3 id="cart">Cart Total: $0</h3>
+
+<script>
+let total = 0;
+
+function add(price) {
+    total += price;
+    document.getElementById("cart").innerHTML =
+        "Cart Total: $" + total;
+}
+</script>
+
+</body>
+</html>
